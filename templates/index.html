@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test!</title>
+</head>
+<body>
+<form method="post" name="stoplicht">
+    <label>Begin pauze</label>
+    <input type="time" name="begin"/><br>
+    <label>Einde pauze</label>
+    <input type="time" name="end"><br>
+    <label>naar binnen voor einde pauze</label>
+    <input type="number" name="time"><br>
+    <input type="submit" name="submit" value="Pauze Toevoegen">
+</form>
+
+
+<div class="pauze">
+    {% for pauze in pauses %}
+        {{ pauze.begin }}<br>
+        {{ pauze.end }}<br>
+        {{ pauze.time }}<br><br><br>
+    {% endfor %}
+</div>
+
+</body>
+</html>
