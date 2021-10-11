@@ -1,0 +1,6 @@
+@lxpanel --profile LXDE-pi
+@pcmanfm --desktop --profile LXDE-pi
+@xscreensaver -no-splash
+
+/home/pi/stoplicht/main.py
+chromium-browser --kiosk 127.0.0.1:5000/stoplicht

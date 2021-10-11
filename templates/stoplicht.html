@@ -2,11 +2,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <!--    <style>-->
-    <!--        body{-->
-    <!--            background-color: orange;-->
-    <!--        }-->
-    <!--    </style>-->
+        <style>
+            body{
+                background-color: orange;
+            }
+        </style>
 </head>
 <body>
 <h1 hidden id="stoplicht">Stoplicht her</h1>
@@ -14,12 +14,14 @@
     {% for pauze in pauses %}
     {{ pauze.begin }},
     {% endfor %}
+    14:30
 </div>
 <br>
 <div hidden id="eindtijd">
     {% for pauze in pauses %}
     {{ pauze.end }},
     {% endfor %}
+
 </div>
 
 
@@ -27,43 +29,32 @@
 <script>
 
     setInterval(function () {
-        // var time = new Date();
-        // var minutes = time.getMinutes();
-        // if (minutes < 10){
-        //     minutes = "0"+time.getMinutes();
-        // }
-        // var timeString = time.getHours()+":"+minutes;
-        //
-        // //get all the break times from the html
-        // var begintijden = document.getElementById("begintijd").innerText;
-        // var begin = begintijden.split(",");
-        //
-        // //get all break endings from the html
-        // var eindtijden = document.getElementById("eindtijd").innerText;
-        // var eind = eindtijden.split(",");
-        //
-        // begin.forEach((tijd)=>{
-        //     if (tijd === timeString+":00" || tijd === " "+timeString+":00"){
-        //         document.body.style.backgroundColor= "green";
-        //     }
-        // })
-        //
-        // eind.forEach((tijd)=>{
-        //     if (tijd === timeString+":00" || tijd === " "+timeString+":00"){
-        //         document.body.style.backgroundColor= "red";
-        //     }
-        //     console.log(tijd)
-        //     console.log(timeString)
-        // })
-        var time = new Date;
-        var timeString = time.getHours() + ":" + time.getMinutes()
-        console.log(timeString)
-        if (timeString === "10:10" || timeString === "12:05") {
-            document.body.style.backgroundColor = "red";
+        var time = new Date();
+        var minutes = time.getMinutes();
+        if (minutes < 10){
+            minutes = "0"+time.getMinutes();
         }
-        if(timeString === "10:20" || timeString === "12:30") {
-            document.body.style.backgroundColor = "green";
-        }
+        var timeString = time.getHours()+":"+minutes;
+
+        //get all the break times from the html
+        var begintijden = document.getElementById("begintijd").innerText;
+        var begin = begintijden.split(",");
+
+        //get all break endings from the html
+        var eindtijden = document.getElementById("eindtijd").innerText;
+        var eind = eindtijden.split(",");
+
+        begin.forEach((tijd)=>{
+            if (tijd.includes(timeString)){
+                document.body.style.backgroundColor= "red";
+            }
+        })
+
+        eind.forEach((tijd)=>{
+            if (tijd.includes(timeString)){
+                document.body.style.backgroundColor= "green";
+            }
+        })
     }, 1000);
 
 </script>
