@@ -2,6 +2,7 @@ sudo pip install --upgrade pip
 sudo pip install Flask
 sudo pip install Flask-MySQLdb
 
+sudo cp ./autostart /etc/xdg/lxsession/LXDE-pi/autostart
 sudo cp ./stoplicht.service /etc/systemd/system/stoplicht.service
 
 chmod +x ./main.py
