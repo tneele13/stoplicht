@@ -1,7 +1,7 @@
 # AO stoplicht
 to install on a pi run the following command
 
-``wget  https://github.com/tneele13/stoplicht/archive/refs/tags/v1.0.0.zip && unzip v1.0.0.zip && sh /home/pi/stoplicht-0.0.1/init.sh``
+``wget  https://github.com/tneele13/stoplicht/archive/refs/tags/v1.0.1.zip && unzip v1.0.1.zip && sh /home/pi/stoplicht-1.0.1/init.sh``
 
 ## 2.
 

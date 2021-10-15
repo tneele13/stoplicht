@@ -1,0 +1,12 @@
+[Unit]
+SourcePath=/home/pi/Documenten/scaldanfc/stoplicht-1.0.0/main.py
+Description=keep running the python file
+After=multi-user.target
+
+[Service]
+Restart=yes
+ExecStart=/usr/bin/python3 /home/pi/Documenten/scaldanfc/stoplicht-1.0.0/main.py
+User=pi
+
+[Install]
+WantedBy=multi-user.target
