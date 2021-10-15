@@ -1,5 +1,5 @@
 [Unit]
-SourcePath=/home/pi/Documenten/scaldanfc/stoplicht-1.0.0/main.py
+SourcePath=/home/pi/Documenten/stoplicht-1.0.1/main.py
 Description=keep running the python file
 After=multi-user.target
 
